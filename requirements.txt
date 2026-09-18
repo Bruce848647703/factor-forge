@@ -1,0 +1,6 @@
+numpy>=1.22
+pandas>=1.4
+pytest>=7.0
+
+# optional: PDF research-report parsing
+pymupdf>=1.23

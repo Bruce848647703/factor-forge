@@ -1,0 +1,26 @@
+{
+  "name": "VOL",
+  "name_cn": "已实现波动率因子",
+  "category": "已实现波动率因子",
+  "description": "低波动异象与彩票偏好、杠杆约束有关；波动率因子与未来收益负相关（低波动者风险调整后表现更优），常用于风险控制与防御型配置。",
+  "formula": "VOL_{i,t} = std( r_{i,t-20:t} ) * sqrt(252)",
+  "variables": [
+    {
+      "symbol": "r_{i,t}",
+      "name_cn": "t日的日收益率，由收盘价计算；",
+      "data_field": "close",
+      "description": "t日的日收益率，由收盘价计算；"
+    },
+    {
+      "symbol": "std",
+      "name_cn": "滚动窗口内的标准差",
+      "data_field": "",
+      "description": "滚动窗口内的标准差"
+    }
+  ],
+  "direction": -1,
+  "direction_note": "负相关",
+  "params": {},
+  "source": "volatility.txt",
+  "operator": "volatility"
+}

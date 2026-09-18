@@ -1,0 +1,87 @@
+{
+  "dependencies": [
+    {
+      "type": "table",
+      "database": "DBCheck",
+      "tables": [
+        {
+          "table": "LegacyDBOK",
+          "recency": 0,
+          "daytype": "C"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "database": "LegacyDB",
+      "tables": [
+        {
+          "table": "DailyQuote",
+          "recency": 0,
+          "daytype": "C"
+        },
+        {
+          "table": "TradeCalendar",
+          "recency": 0,
+          "daytype": "C"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "item": "min-munber-of-values",
+      "value": 1000,
+      "skip": "false"
+    },
+    {
+      "item": "value-is-always-numeric",
+      "value": "true",
+      "skip": "false"
+    },
+    {
+      "item": "no-negative-values",
+      "value": "true",
+      "skip": "true"
+    },
+    {
+      "item": "no-duplicated-ticker",
+      "value": "true",
+      "skip": "false"
+    },
+    {
+      "item": "ticker-history-check",
+      "value": "true",
+      "skip": "false"
+    }
+  ],
+  "project_info": [
+    {
+      "project_id": 0,
+      "project_name": "Signal_ILLIQ",
+      "project_type": "signal",
+      "git_server": "gitlab.example.com",
+      "git_repo": "signal-library/calendar/momentum_factor/Signal_ILLIQ.git",
+      "config_tag": ""
+    }
+  ],
+  "runner_info": [
+    {
+      "runner_id": 0,
+      "runner_name": "Signal_ILLIQ",
+      "runner_type": "signal",
+      "config_tag": ""
+    }
+  ],
+  "dag_info": [
+    {
+      "dag_id": "Signal_ILLIQ_0100",
+      "dag_type": "signal_library",
+      "start_time": "0100",
+      "day_delay": 1,
+      "check_dependency": 1,
+      "insert_database": 1,
+      "worker_image": "registry.example.com/ci/worker-py311:latest"
+    }
+  ]
+}

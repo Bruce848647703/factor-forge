@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+.datadict_cache.json
+sources/state.json
+sources/cache/
+sources/inbox/*.pdf
+examples/from_sources/

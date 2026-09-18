@@ -1,0 +1,66 @@
+{
+  "sources": [
+    {
+      "id": "eastmoney_industry",
+      "name": "东方财富研报中心-行业研报",
+      "kind": "eastmoney",
+      "params": {
+        "endpoint": "list",
+        "qtype": 1,
+        "days": 30,
+        "page_size": 100,
+        "keywords": [
+          "因子",
+          "量化",
+          "多因子",
+          "选股",
+          "金融工程",
+          "alpha",
+          "Alpha"
+        ],
+        "pages": 3
+      },
+      "enabled": true,
+      "group": "momentum_factor",
+      "notes": "reportapi.eastmoney.com/report/list qType=1；PDF: pdf.dfcfw.com/pdf/H3_<infoCode>_1.pdf；keywords 为空则不过滤"
+    },
+    {
+      "id": "eastmoney_strategy",
+      "name": "东方财富研报中心-策略/金工",
+      "kind": "eastmoney",
+      "params": {
+        "endpoint": "jg",
+        "qtype": 2,
+        "days": 60,
+        "page_size": 100,
+        "keywords": [
+          "因子",
+          "量化",
+          "多因子",
+          "选股",
+          "金融工程",
+          "alpha",
+          "Alpha",
+          "择时"
+        ],
+        "pages": 5
+      },
+      "enabled": true,
+      "group": "momentum_factor",
+      "notes": "reportapi.eastmoney.com/report/jg（策略类）"
+    },
+    {
+      "id": "local_inbox",
+      "name": "本地研报收件箱",
+      "kind": "folder",
+      "params": {
+        "path": "inbox",
+        "pattern": "*.pdf",
+        "org": ""
+      },
+      "enabled": true,
+      "group": "momentum_factor",
+      "notes": "把券商研报 PDF 放进 sources/inbox/，sync 时自动处理新文件"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+include:
+  - project: 'signal-library/scheduler-ci'
+    file: 'Auto-Trigger.yml'
+
+variables:
+  GIT_CLONE_PATH: ${CI_BUILDS_DIR}/${CI_PROJECT_NAME}

@@ -1,0 +1,18 @@
+{
+  "signal_name": "Signal_REV",
+  "signal_name_raw": "短期反转因子",
+  "signal_category": "短期反转因子",
+  "signal_formula_raw": "REV_{i,t} = -( Close_{i,t} / Close_{i,t-1} - 1 )",
+  "signal_formula": [
+    "REV_{i,t} = -( Close_{i,t} / Close_{i,t-1} - 1 )"
+  ],
+  "signal_variables_name": [
+    "Close"
+  ],
+  "signal_formula_add": "",
+  "signal_variables_name_add": [],
+  "signal_variables_description": "Close: t日的收盘价",
+  "signal_description": "短期反转反映流动性冲击后的价格回补与过度反应的修正；短期反转因子与未来收益正相关（即过去跌得多者未来更易反弹），与中长期动量方向相反。",
+  "signal_reference": "reversal.txt",
+  "human_feedback": ""
+}

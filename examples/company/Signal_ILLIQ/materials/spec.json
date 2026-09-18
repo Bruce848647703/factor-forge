@@ -1,0 +1,20 @@
+{
+  "signal_name": "Signal_ILLIQ",
+  "signal_name_raw": "Amihud非流动性因子",
+  "signal_category": "Amihud非流动性因子",
+  "signal_formula_raw": "ILLIQ_{i,t} = mean_{s=t-20}^{t} ( |r_{i,s}| / Amount_{i,s} )",
+  "signal_formula": [
+    "ILLIQ_{i,t} = mean_{s=t-20}^{t} ( |r_{i,s}| / Amount_{i,s} )"
+  ],
+  "signal_variables_name": [
+    "r_{i,s}",
+    "Amount_{i,s}",
+    "mean"
+  ],
+  "signal_formula_add": "",
+  "signal_variables_name_add": [],
+  "signal_variables_description": "r_{i,s}: s日的收益率；Amount_{i,s}: s日的成交额；mean: 过去20个交易日的均值",
+  "signal_description": "Amihud(2002)提出该指标刻画价格冲击；非流动性因子与未来收益正相关（流动性差者获得溢价），但在市场流动性枯竭时风险显著放大。",
+  "signal_reference": "amihud.txt",
+  "human_feedback": ""
+}

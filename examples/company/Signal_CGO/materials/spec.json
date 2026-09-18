@@ -1,0 +1,22 @@
+{
+  "signal_name": "Signal_CGO",
+  "signal_name_raw": "资本利得突出量",
+  "signal_category": "行为金融因子-处置效应",
+  "signal_formula_raw": "RP_t = (1/k) * Σ_{n=0}^{T-1} [ V_{t-n} * Π_{s=1}^{n-1} (1 - V_{t-n+s}) ] * P_{t-n} \\quad CGO_{i,t} = (Close_{i,t} - RP_t) / Close_{i,t}",
+  "signal_formula": [
+    "RP_t = (1/k) * Σ_{n=0}^{T-1} [ V_{t-n} * Π_{s=1}^{n-1} (1 - V_{t-n+s}) ] * P_{t-n}",
+    "CGO_{i,t} = (Close_{i,t} - RP_t) / Close_{i,t}"
+  ],
+  "signal_variables_name": [
+    "V_t",
+    "Close",
+    "P_t",
+    "k"
+  ],
+  "signal_formula_add": "",
+  "signal_variables_name_add": [],
+  "signal_variables_description": "V_t: t日的换手率；Close: 收盘价；P_t: VWAP均价；k: 权重系数，用于保证计算RP_t时的权重和等于1。",
+  "signal_description": "处置效应指投资者\"售盈持亏\"的情感倾向；CGO因子值越大，浮盈越大；历史股价上涨、高CGO意味着大量投资者盈利，抛压大，卖盘压力增加，股价上涨受阻；历史股价下跌、低或负CGO意味着投资者普遍被套，抛售意愿弱，卖压小，一旦有利好股价更容易反弹；CGO因子对应反转效应，与未来收益负相关。",
+  "signal_reference": "cgo.txt",
+  "human_feedback": ""
+}

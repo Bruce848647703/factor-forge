@@ -1,0 +1,20 @@
+{
+  "name": "MOM",
+  "name_cn": "动量因子",
+  "category": "动量因子",
+  "description": "动量效应是市场中最稳健的异象之一，反映信息扩散与投资者行为偏差；动量因子与未来收益正相关，但在市场急剧反转时回撤较大。",
+  "formula": "MOM_{i,t} = Close_{i,t-1} / Close_{i,t-12} - 1",
+  "variables": [
+    {
+      "symbol": "Close",
+      "name_cn": "t日的收盘价",
+      "data_field": "close",
+      "description": "t日的收盘价"
+    }
+  ],
+  "direction": 1,
+  "direction_note": "正相关",
+  "params": {},
+  "source": "momentum.txt",
+  "operator": "momentum"
+}

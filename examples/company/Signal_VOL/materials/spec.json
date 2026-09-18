@@ -1,0 +1,19 @@
+{
+  "signal_name": "Signal_VOL",
+  "signal_name_raw": "已实现波动率因子",
+  "signal_category": "已实现波动率因子",
+  "signal_formula_raw": "VOL_{i,t} = std( r_{i,t-20:t} ) * sqrt(252)",
+  "signal_formula": [
+    "VOL_{i,t} = std( r_{i,t-20:t} ) * sqrt(252)"
+  ],
+  "signal_variables_name": [
+    "r_{i,t}",
+    "std"
+  ],
+  "signal_formula_add": "",
+  "signal_variables_name_add": [],
+  "signal_variables_description": "r_{i,t}: t日的日收益率，由收盘价计算；；std: 滚动窗口内的标准差",
+  "signal_description": "低波动异象与彩票偏好、杠杆约束有关；波动率因子与未来收益负相关（低波动者风险调整后表现更优），常用于风险控制与防御型配置。",
+  "signal_reference": "volatility.txt",
+  "human_feedback": ""
+}

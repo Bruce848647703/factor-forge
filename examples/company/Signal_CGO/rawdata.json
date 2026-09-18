@@ -1,0 +1,16 @@
+{
+  "legacy_db": {
+    "host": "TODO",
+    "port": "1433",
+    "database": "LegacyDB",
+    "user": "TODO",
+    "password": "TODO"
+  },
+  "oceanbase": {
+    "host": "TODO",
+    "port": "2883",
+    "database": "LegacyDB",
+    "user": "TODO",
+    "password": "TODO"
+  }
+}
